@@ -31,12 +31,18 @@ buildscript {
 
 
     ext {
-        junitVersion = '4.9'
+        /*junitVersion = '4.9'
         slf4jVersion = '1.7.9'
         serenityVersion = '2.1.6'
         serenityCucumberVersion = '1.9.9'
         webdrivermanagerVersion = '3.8.1'
+        */
+        junitVersion = '4.12'
+        slf4jVersion = '1.7.7'
+        serenityVersion = '2.0.17'
+        serenityCucumberVersion = '1.9.20'
     }
+
 
     // TODO 4 Agregar el plugin de sereniy a nuestro script de compilación, ya que, nuestro proyecto necesita usar esta biblioteca externa
 
@@ -54,13 +60,13 @@ dependencies {
     testImplementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
     testImplementation "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
     //testImplementation "org.seleniumhq.webdriver:webdriver-chrome:0.9.7376"
-    testImplementation "io.github.bonigarcia:webdrivermanager:$rootProject.ext.webdrivermanagerVersion"
+    //testImplementation "io.github.bonigarcia:webdrivermanager:$rootProject.ext.webdrivermanagerVersion"
 
     compile "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
     compile "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
     compile "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
     //compile "org.seleniumhq.webdriver:webdriver-chrome:0.9.7376"
-    compile "io.github.bonigarcia:webdrivermanager:$rootProject.ext.webdrivermanagerVersion"
+    //compile "io.github.bonigarcia:webdrivermanager:$rootProject.ext.webdrivermanagerVersion"
 }
 
 // TODO 6 Pasar argumentos a nuestro entorno de pruebas. Lo anterior porque los Argumentos -D pasados a gradle no se propagan a las prueba
