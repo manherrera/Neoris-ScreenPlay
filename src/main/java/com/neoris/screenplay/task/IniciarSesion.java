@@ -25,7 +25,7 @@ public class IniciarSesion implements Task {
                 Click.on(INGRESAR)
         );
     }
-    public static IniciarSesion conElUsuario(Usuario usuario) {
+    public static IniciarSesion con(Usuario usuario) {
         return instrumented(IniciarSesion.class, usuario);
     }
 }
