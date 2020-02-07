@@ -1,5 +1,5 @@
 public class Pasos {
-    // TODO 11 Crear el paquete base de la aplicación : grupo "com.cedaniel200.screenplay" + nombre-app "dojo" = com.cedaniel200.screenplay.dojo
+    // TODO 11 Crear el paquete base de la aplicación : grupo "com.neoris.screenplay"
     // TODO 12 Crear el paquete runner dentro del paquede base
     // TODO 13 Crear el runner (InicioSesion.java) utilizando las siguientes anotaciones de clase:
     /*
