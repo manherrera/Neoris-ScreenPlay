@@ -3,6 +3,7 @@ package com.neoris.screenplay.stepdefinition;
 import com.neoris.screenplay.model.Usuario;
 import com.neoris.screenplay.task.IniciarSesion;
 import com.neoris.screenplay.userinterface.InicioSesionPage;
+import com.neoris.screenplay.question.LaPaginaDeInicio;
 import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -15,6 +16,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static org.hamcrest.core.Is.is;
 
 public class InicioSesionStepDefinition {
 
