@@ -1,5 +1,6 @@
 package com.neoris.screenplay.stepdefinition;
 
+import com.neoris.screenplay.userinterface.InicioSesionPage;
 import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -10,6 +11,7 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class InicioSesionStepDefinition {
 
@@ -29,8 +31,9 @@ public class InicioSesionStepDefinition {
 
     @When("^Productor se autentica$")
     public void productorSeAutentica() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        theActorInTheSpotlight().attemptsTo(
+                IniciarSesion.conElUsuario(new Usuario("usuario", "contrasena"))
+        );
     }
 
     @Then("Productor debe ver la pagina de inicio")
