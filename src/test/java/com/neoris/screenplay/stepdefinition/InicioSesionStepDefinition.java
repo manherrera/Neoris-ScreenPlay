@@ -30,8 +30,8 @@ public class InicioSesionStepDefinition {
     }
 
     @Given("^(.*) quiere autenticarse$")
-    public void QuiereAutenticarse(String actor) {
-        theActorCalled(actor).attemptsTo(
+    public void QuiereAutenticarse(String actorName) {
+        theActorCalled(actorName).attemptsTo(
                 Open.browserOn(inicioSesionPage)
         );
     }
