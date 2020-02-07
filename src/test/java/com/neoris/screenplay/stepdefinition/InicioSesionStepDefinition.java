@@ -12,6 +12,7 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -40,8 +41,7 @@ public class InicioSesionStepDefinition {
 
     @Then("Productor debe ver la pagina de inicio")
     public void productorDebeVerLaPaginaDeInicio() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new PendingException();
+        theActorInTheSpotlight().should(seeThat(LaPaginaDeInicio.esVisible()));
     }
 }
 
