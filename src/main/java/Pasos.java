@@ -8,9 +8,9 @@ public class Pasos {
     // TODO 25 Crear el paquetes model dentro del paquete base
     // TODO 26 Crear el modelo Usuario.java dentro del paquete model, con:
     //  los atributos usuario, contrasena y métodos get
-    // TODO 27 Crear la tarea dentro del paquete task, implementando la interfaz Task
+    // TODO 27 Crear la tarea dentro del paquete task, implemetando la interfaz Task
     // TODO 28 Crear la instancia de la tarea creada usando el método instrumented
-    // TODO 29 Mapear lo elementos de la pagina de inicio de sesion de GitHub en InicioSesionPage
+    // TODO 29 Mapear lo elementos de la pagina de inicio de sesion en InicioSesionPage
     // TODO 30 Implementar el método performAs de la tarea usando los elementos mapeados
 
     // TODO 33 Crear UsuarioBuilder.java dentro del paquete model

@@ -1,5 +1,7 @@
 package com.neoris.screenplay.stepdefinition;
 
+import com.neoris.screenplay.model.Usuario;
+import com.neoris.screenplay.task.IniciarSesion;
 import com.neoris.screenplay.userinterface.InicioSesionPage;
 import cucumber.api.PendingException;
 import cucumber.api.java.Before;
