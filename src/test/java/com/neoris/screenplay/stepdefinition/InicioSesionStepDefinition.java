@@ -34,7 +34,7 @@ public class InicioSesionStepDefinition {
     @When("^Productor se autentica$")
     public void productorSeAutentica() {
         theActorInTheSpotlight().attemptsTo(
-                IniciarSesion.conElUsuario(new Usuario("usuario", "contrasena"))
+                IniciarSesion.con(new Usuario("usuario", "contrasena"))
         );
     }
 
