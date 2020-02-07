@@ -2,9 +2,11 @@ package com.neoris.screenplay.question;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.annotations.Subject;
 
 import static com.neoris.screenplay.userinterface.MenuPage.DASHBOARD;
 
+@Subject("the home page is visible")
 public class LaPaginaDeInicio implements Question<Boolean> {
 
     @Override
