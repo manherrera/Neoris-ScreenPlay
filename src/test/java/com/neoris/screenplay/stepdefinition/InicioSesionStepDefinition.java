@@ -13,6 +13,7 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
+import static com.neoris.screenplay.model.UsuarioBuilder.unUsuarioPorDefecto;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -37,8 +38,7 @@ public class InicioSesionStepDefinition {
     @When("^Productor se autentica$")
     public void productorSeAutentica() {
         theActorInTheSpotlight().attemptsTo(
-                IniciarSesion.con(new Usuario("usuario", "contrasena"))
-        );
+                IniciarSesion.con(unUsuarioPorDefecto()));
     }
 
     @Then("Productor debe ver la pagina de inicio")
