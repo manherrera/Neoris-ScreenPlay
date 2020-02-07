@@ -1,9 +1,10 @@
 package com.neoris.screenplay.userinterface;
 
-import net.serenitybdd.core.annotations.findby.By;
+
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.openqa.selenium.By;
 
 @DefaultUrl("https://sapd-wdd.cooperacionseguros.com.ar:44300/sap/bc/ui2/flp")
 public class InicioSesionPage extends PageObject {
