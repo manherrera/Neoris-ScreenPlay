@@ -1,5 +1,6 @@
 package com.neoris.screenplay.stepdefinition;
 
+import com.neoris.screenplay.exception.AutenticacionFallidaError;
 import com.neoris.screenplay.model.Usuario;
 import com.neoris.screenplay.task.IniciarSesion;
 import com.neoris.screenplay.userinterface.InicioSesionPage;
@@ -29,21 +30,22 @@ public class InicioSesionStepDefinition {
     }
 
     @Given("^(.*) quiere autenticarse$")
-    public void productorQuiereAutenticarse(String actor) {
+    public void QuiereAutenticarse(String actor) {
         theActorCalled(actor).attemptsTo(
                 Open.browserOn(inicioSesionPage)
         );
     }
 
-    @When("^Productor se autentica$")
-    public void productorSeAutentica() {
+    @When("^[a-z,A-Z]{1,50} se autentica$")
+    public void SeAutentica() {
         theActorInTheSpotlight().attemptsTo(
                 IniciarSesion.con(unUsuarioPorDefecto()));
     }
 
-    @Then("Productor debe ver la pagina de inicio")
-    public void productorDebeVerLaPaginaDeInicio() {
-        theActorInTheSpotlight().should(seeThat(LaPaginaDeInicio.esVisible()));
+    @Then("^[a-z,A-Z]{1,50} debe ver la pagina de inicio$")
+    public void DebeVerLaPaginaDeInicio() {
+        theActorInTheSpotlight().should(seeThat(LaPaginaDeInicio.esVisible())
+                .orComplainWith(AutenticacionFallidaError.class, "authentication failed"));
     }
 }
 
