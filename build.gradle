@@ -1,5 +1,5 @@
-group 'com.cedaniel200.screenplay'
-version '1.0-SNAPSHOT'
+group 'com.neoris'
+version '1.0'
 
 // TODO 1 Agregar los plugins necesarios para nuestro proyecto
 apply plugin: 'java'                            // Agrega compilación de Java junto con capacidades de prueba y agrupación a un proyecto. Sirve de base para muchos de los otros complementos de Gradle de lenguaje JVM.
@@ -12,7 +12,7 @@ apply plugin: 'net.serenity-bdd.aggregator'     // Agrega las tareas relacionada
 sourceCompatibility = 1.8
 
 repositories {
-    // TODO 2 Agregar los repositorio
+    // TODO 2 Agregar los repositorios
     /*
     mavenCentral()
     mavenLocal()
@@ -31,10 +31,10 @@ buildscript {
     // TODO 3 Definir las propiedades adicionales para almacenar la version de nuestras dependencias
     /*
     ext {
-        junitVersion = '4.12'
-        slf4jVersion = '1.7.7'
-        serenityVersion = '2.0.17'
-        serenityCucumberVersion = '1.9.20'
+        junitVersion = '5.6.0'
+        slf4jVersion = '1.7.30'
+        serenityVersion = '2.1.4'
+        serenityCucumberVersion = '1.9.51'
     }
     */
     // TODO 4 Agregar el plugin de sereniy a nuestro script de compilación, ya que, nuestro proyecto necesita usar esta biblioteca externa
