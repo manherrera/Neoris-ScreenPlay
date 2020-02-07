@@ -14,8 +14,10 @@ public class Pasos {
     // TODO 16 Crear la definicion de los pasos (InicioSesionStepDefinition.java) utilizando el resultado de la ejecución del runner
     // TODO 17 Crear en InicioSesionStepDefinition el método setTheStage colocandole la anotación de método
     //    //  @Before
-    //  y la siguiente linea de código
-    //  OnStage.setTheStage(new OnlineCast());
+    //  y la siguiente linea de código:
+    //      public void setTheStage(){
+    //        OnStage.setTheStage(new OnlineCast());
+    //    }
 
     // TODO 18 Implemar el médoto con la anotación @Given donde se debe:
     //  Crear el actor

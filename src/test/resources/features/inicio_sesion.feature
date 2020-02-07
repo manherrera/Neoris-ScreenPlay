@@ -4,4 +4,4 @@ Feature: Autenticar
   Scenario: Autenticar usuario con en SAP-Fiori
     Given Productor quiere autenticarse
     When Productor se autentica
-    Then Productor debe ver la página de inicio
+    Then Productor debe ver la pagina de inicio
