@@ -8,18 +8,20 @@ public class Usuario {
 
     private final String usuario;
     private final String contrasena;
+    private final String dni;
 
 
-    public Usuario(String usuario, String contrasena) {
+    public Usuario(String usuario, String contrasena, String dni) {
         this.usuario = usuario;
         this.contrasena = contrasena;
+        this.dni = dni;
 
         validarEstado();
     }
 
     private void validarEstado() {
-        if (esVacioONulo(usuario) || esVacioONulo(contrasena)) {
-            throw new UsuarioEstadoIlegalException(String.format("Usuario (%s) o contrasena (%s) inválidos", usuario, contrasena));
+        if (esVacioONulo(usuario) || esVacioONulo(contrasena) || esVacioONulo(dni)) {
+            throw new UsuarioEstadoIlegalException(String.format("Usuario (%s) o contrasena (%s) o Dni (%s) inválidos", usuario, contrasena, dni));
         }
     }
 
@@ -30,5 +32,7 @@ public class Usuario {
     public String getContrasena() {
         return contrasena;
     }
+
+    public String getDni () {return dni; }
 }
 
